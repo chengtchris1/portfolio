@@ -18,6 +18,7 @@ function App() {
       </div>
       <Parallax speed={-10}>
         <Hero />
+        <div className='sm:hidden absolute inset-0 bg-transparent z-10'></div>
       </Parallax>
       <Parallax speed={-10}>
         <About />
