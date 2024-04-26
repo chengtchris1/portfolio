@@ -25,8 +25,6 @@ function App() {
       <Portfolio />
       <Portfolio />
       <Portfolio />
-      <Portfolio />
-      <Portfolio />
     </div>
   );
 }
