@@ -1,6 +1,7 @@
 import { Parallax } from "react-scroll-parallax";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import portrait from "./assets/portrait.png";
 const About = () => {
   const [parallaxEnabled, setParallaxEnabled] = useState(true);
   const parallaxRef = useRef();
@@ -44,7 +45,7 @@ const About = () => {
               easing={"easeInOut"}
               //translateX={[0, -3, "easeInOut"]}
             >
-              <img className=' w-52 p-0' src='src/assets/portrait.png' />
+              <img className=' w-52 p-0' src={portrait} />
             </Parallax>
           </div>
         </figure>
