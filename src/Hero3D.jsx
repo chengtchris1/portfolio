@@ -22,7 +22,7 @@ const Hero3D = () => {
     if (ref.current) {
       const time = clock.getElapsedTime(); // Adjust this to your liking
       const baseSpeed = 100; // Adjust this to your liking
-      ref.current.rotation.y = time + scrollPos / baseSpeed;
+      ref.current.rotation.y = (time % (2 * Math.PI)) + scrollPos / baseSpeed;
     }
   });
 
