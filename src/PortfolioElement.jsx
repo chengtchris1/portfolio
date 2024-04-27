@@ -1,20 +1,57 @@
-const PortfolioElement = () => {
+import { useState } from "react";
+
+const PortfolioElement = ({ images }) => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handlePrev = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide > 0 ? prevSlide - 1 : images.length - 1
+    );
+  };
+
+  const handleNext = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide < images.length - 1 ? prevSlide + 1 : 0
+    );
+  };
+
   return (
-    <div className='card lg:card-side bg-base-100 shadow-xl w-full sm:mx-36 my-10'>
-      <figure>
-        <img
-          src='https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg'
-          alt='Album'
-        />
-      </figure>
-      <div className='card-body'>
-        <h2 className='card-title'>New album is released!</h2>
-        <p>Click the button to listen on Spotiwhy app.</p>
-        <div className='card-actions justify-end'>
-          <button className='btn btn-primary'>View more details</button>
+    <>
+      <div className='carousel w-full overflow-hidden relative'>
+        <div
+          className='carousel-inner flex transition-transform duration-500 ease-in-out'
+          style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div className='carousel-item w-full' key={index}>
+              <img src={image} className='w-full' />
+            </div>
+          ))}
+        </div>
+        <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+          <button onClick={handlePrev} className='btn btn-circle'>
+            ❮
+          </button>
+          <button onClick={handleNext} className='btn btn-circle'>
+            ❯
+          </button>
         </div>
       </div>
-    </div>
+      <div className='flex justify-center w-full py-2 gap-2'>
+        {images.map((_, index) => (
+          <button
+            onClick={() => setActiveSlide(index)}
+            className={`btn btn-xs ${
+              index === activeSlide ? "bg-gray-900" : "bg-gray-300"
+            }`}
+            key={index}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
+    </>
   );
 };
+
 export default PortfolioElement;

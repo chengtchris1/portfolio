@@ -24,8 +24,6 @@ function App() {
         <About />
       </Parallax>
       <Portfolio />
-      <Portfolio />
-      <Portfolio />
     </div>
   );
 }
