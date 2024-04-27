@@ -1,14 +1,7 @@
 import { useState } from "react";
 
-function PortfolioElement({ images }) {
-  const [startX, setStartX] = useState(0);
+const PortfolioElement = ({ images }) => {
   const [activeSlide, setActiveSlide] = useState(0);
-
-  const handleNext = () => {
-    setActiveSlide((prevSlide) =>
-      prevSlide < images.length - 1 ? prevSlide + 1 : 0
-    );
-  };
 
   const handlePrev = () => {
     setActiveSlide((prevSlide) =>
@@ -16,26 +9,10 @@ function PortfolioElement({ images }) {
     );
   };
 
-  const handleTouchStart = (e) => {
-    setStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    const endX = e.touches[0].clientX;
-    const diffX = startX - endX;
-
-    if (Math.abs(diffX) > 50) {
-      // Swipe threshold
-      if (diffX > 0) {
-        // Swipe left, go to next slide
-        handleNext();
-      } else {
-        // Swipe right, go to previous slide
-        handlePrev();
-      }
-
-      setStartX(endX);
-    }
+  const handleNext = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide < images.length - 1 ? prevSlide + 1 : 0
+    );
   };
 
   return (
@@ -44,8 +21,6 @@ function PortfolioElement({ images }) {
         <div
           className='carousel-inner flex transition-transform duration-500 ease-in-out'
           style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
         >
           {images.map((image, index) => (
             <div className='carousel-item w-full' key={index}>
@@ -77,6 +52,6 @@ function PortfolioElement({ images }) {
       </div>
     </>
   );
-}
+};
 
 export default PortfolioElement;
