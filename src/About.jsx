@@ -15,7 +15,7 @@ const About = () => {
     const checkScroll = () => {
       //if mobile make scrollY = 800, if not mobile make it
 
-      let scrollY = isMobile ? 680 : 800;
+      let scrollY = isMobile ? 600 : 800;
       if (window.scrollY > scrollY) {
         setParallaxEnabled(false);
         if (parallaxRef.current) {
@@ -45,7 +45,7 @@ const About = () => {
               easing={"easeInOut"}
               //translateX={[0, -3, "easeInOut"]}
             >
-              <img className=' w-52 p-0' src={portrait} />
+              <img className='w-52 p-0 rounded-full' src={portrait} />
             </Parallax>
           </div>
         </figure>
