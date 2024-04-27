@@ -3,7 +3,7 @@ import { LuGithub } from "react-icons/lu";
 const Navbar = () => {
   return (
     <>
-      <div className='navbar backdrop-blur backdrop-brightness-[25%] font-sans z-30'>
+      <div className='navbar backdrop-blur backdrop-brightness-[70%] font-sans z-30'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
