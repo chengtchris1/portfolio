@@ -21,8 +21,9 @@ const Hero3D = () => {
   useFrame(({ clock }) => {
     if (ref.current) {
       const time = clock.getElapsedTime(); // Adjust this to your liking
-      const baseSpeed = 100; // Adjust this to your liking
-      ref.current.rotation.y = (time % (2 * Math.PI)) + scrollPos / baseSpeed;
+      const baseSpeed = 5000; // Adjust this to your liking
+      const revolutionSpeed = 1 + scrollPos / baseSpeed;
+      ref.current.rotation.y = (revolutionSpeed * time) % (2 * Math.PI);
     }
   });
 
