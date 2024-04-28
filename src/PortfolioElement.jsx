@@ -5,39 +5,39 @@ const PortfolioElement = ({ images }) => {
 
   const handlePrev = () => {
     setActiveSlide((prevSlide) =>
-      prevSlide > 0 ? prevSlide - 1 : images.length - 1
+      prevSlide > 0 ? prevSlide - 1 : images.length - 1,
     );
   };
 
   const handleNext = () => {
     setActiveSlide((prevSlide) =>
-      prevSlide < images.length - 1 ? prevSlide + 1 : 0
+      prevSlide < images.length - 1 ? prevSlide + 1 : 0,
     );
   };
 
   return (
     <>
-      <div className='carousel w-full overflow-hidden relative'>
+      <div className="carousel relative w-full overflow-hidden">
         <div
-          className='carousel-inner flex transition-transform duration-500 ease-in-out'
+          className="carousel-inner flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${activeSlide * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div className='carousel-item w-full' key={index}>
-              <img src={image} className='w-full' />
+            <div className="carousel-item w-full" key={index}>
+              <img src={image} className="w-full" />
             </div>
           ))}
         </div>
-        <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
-          <button onClick={handlePrev} className='btn btn-circle'>
+        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <button onClick={handlePrev} className="btn btn-circle">
             ❮
           </button>
-          <button onClick={handleNext} className='btn btn-circle'>
+          <button onClick={handleNext} className="btn btn-circle">
             ❯
           </button>
         </div>
       </div>
-      <div className='flex justify-center w-full py-2 gap-2'>
+      <div className="flex w-full justify-center gap-2 py-2">
         {images.map((_, index) => (
           <button
             onClick={() => setActiveSlide(index)}

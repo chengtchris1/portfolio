@@ -20,7 +20,7 @@ const About = () => {
         setParallaxEnabled(false);
         if (parallaxRef.current) {
           parallaxRef.current.controller.updateElementPosition(
-            parallaxRef.current
+            parallaxRef.current,
           );
         }
       } else {
@@ -35,9 +35,9 @@ const About = () => {
 
   return (
     <>
-      <div className='flex w-full h-auto flex-col sm:flex-row justify-center items-center'>
+      <div className="flex h-auto w-full flex-col items-center justify-center sm:flex-row">
         <figure>
-          <div className='rounded-full bg-opacity-50 bg-gradient-to-br from-blue-500 to-green-500 p-0 w-52 h-52 overflow-clip'>
+          <div className="h-52 w-52 overflow-clip rounded-full bg-opacity-50 bg-gradient-to-br from-blue-500 to-green-500 p-0">
             <Parallax
               ref={parallaxRef}
               disabled={!parallaxEnabled}
@@ -45,17 +45,17 @@ const About = () => {
               easing={"easeInOut"}
               //translateX={[0, -3, "easeInOut"]}
             >
-              <img className='p-0 rounded-full' src={portrait} />
+              <img className="rounded-full p-0" src={portrait} />
             </Parallax>
           </div>
         </figure>
-        <div className=' flex flex-col text-white m-10'>
-          <div className=''>
-            <h1 className='text-6xl'>About</h1>
+        <div className=" m-10 flex flex-col text-white">
+          <div className="">
+            <h1 className="text-6xl">About</h1>
           </div>
           <Parallax disabled={!parallaxEnabled || isMobile} speed={10}>
             <div
-              className={`flex flex-wrap text-2xl break-words transition-opacity duration-500 ${
+              className={`flex flex-wrap break-words text-2xl transition-opacity duration-500 ${
                 inView ? "opacity-100" : "opacity-0"
               }`}
               ref={ref}
