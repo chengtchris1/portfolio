@@ -15,7 +15,7 @@ const About = () => {
     const checkScroll = () => {
       //if mobile make scrollY = 800, if not mobile make it
 
-      let scrollY = isMobile ? 475 : 700;
+      let scrollY = isMobile ? 600 : 700;
       if (window.scrollY > scrollY) {
         setParallaxEnabled(false);
         if (parallaxRef.current) {
