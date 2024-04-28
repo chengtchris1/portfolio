@@ -20,7 +20,7 @@ function App() {
         <Hero />
         <div className="absolute inset-0 z-10 bg-transparent sm:hidden"></div>
       </Parallax>
-      <Parallax speed={-10} opacity={[3, 0]} easing={"easeInOut"}>
+      <Parallax speed={-10} opacity={[3, 0.5]} easing={"easeInOut"}>
         <div className="mx-0 sm:mx-[8.5rem]">
           <About />
         </div>

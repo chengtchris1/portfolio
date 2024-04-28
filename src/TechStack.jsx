@@ -79,7 +79,7 @@ function TechStack() {
   return (
     <>
       {iconRows.map((row, rowIndex) => (
-        <Parallax speed={-2} opacity={[2, 0]} easing={"easeInOut"}>
+        <Parallax speed={-2} opacity={[4, 0]} easing={"easeInOut"}>
           <div
             key={rowIndex}
             className="my-0 flex h-fit w-full items-center justify-center overflow-hidden"
