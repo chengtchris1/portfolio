@@ -78,7 +78,7 @@ function TechStack() {
   }
   return (
     <>
-      <div className='text-white text-center'>
+      <div className='text-white text-left sm:text-center'>
         <h2 className='text-6xl'>Some technologies I've used...</h2>
       </div>
       {iconRows.map((row, rowIndex) => (
@@ -92,7 +92,7 @@ function TechStack() {
               onMouseEnter={() => setLabel(Icon.name)}
               onMouseLeave={() => setLabel(" ")}
             >
-              <motion.div className='text-white text-4xl sm:text-9xl'>
+              <motion.div className='text-white text-5xl sm:text-9xl'>
                 {Icon.component}
               </motion.div>
             </div>
