@@ -29,8 +29,8 @@ const Hero3D = () => {
 
   return (
     <group ref={ref} scale={[2, 2, 2]} rotation={[90, 0, 0]}>
-      <directionalLight intensity={50} color='pink' position={[-1, -1, -1]} />
-      <directionalLight intensity={50} color='pink' position={[1, 1, 1]} />
+      <directionalLight intensity={50} color="pink" position={[-1, -1, -1]} />
+      <directionalLight intensity={50} color="pink" position={[1, 1, 1]} />
       <primitive object={myModel.scene} />
     </group>
   );

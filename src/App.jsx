@@ -9,20 +9,19 @@ import "./App.css";
 
 function App() {
   const { ref, inView, entry } = useInView({
-    /* Optional options */
     threshold: 0,
   });
   return (
-    <div className='w-screen font-sans bg-black'>
-      <div className='fixed w-full top-0 left-0 z-30'>
+    <div className="w-screen bg-black font-sans">
+      <div className="fixed left-0 top-0 z-30 w-full">
         <Navbar />
       </div>
       <Parallax speed={-10}>
         <Hero />
-        <div className='sm:hidden absolute inset-0 bg-transparent z-10'></div>
+        <div className="absolute inset-0 z-10 bg-transparent sm:hidden"></div>
       </Parallax>
       <Parallax speed={-10}>
-        <div className='mx-0 sm:mx-[8.5rem]'>
+        <div className="mx-0 sm:mx-[8.5rem]">
           <About />
         </div>
       </Parallax>

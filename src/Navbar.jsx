@@ -3,22 +3,22 @@ import { LuGithub } from "react-icons/lu";
 const Navbar = () => {
   return (
     <>
-      <div className='navbar backdrop-blur backdrop-brightness-[70%] font-sans z-30'>
-        <div className='navbar-start'>
-          <div className='dropdown'>
-            <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
+      <div className="navbar z-30 font-sans backdrop-blur backdrop-brightness-[70%]">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M4 6h16M4 12h8m-8 6h16'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
             </div>
@@ -45,19 +45,19 @@ const Navbar = () => {
               </li>
           </ul>*/}
           </div>
-          <a className='btn btn-ghost text-xl text-white'>
+          <a className="btn btn-ghost text-xl text-white">
             <span>
-              <span className='opacity-50'>{"<"}</span>
+              <span className="opacity-50">{"<"}</span>
               <span>{"Chris Cheng"}</span>
             </span>
-            <span className='opacity-50'>{"/>"}</span>
-            <span className='font-light opacity-25 hidden sm:flex'>|</span>{" "}
-            <span className='font-light hidden sm:flex '>
+            <span className="opacity-50">{"/>"}</span>
+            <span className="hidden font-light opacity-25 sm:flex">|</span>{" "}
+            <span className="hidden font-light sm:flex ">
               Fullstack Developer
             </span>
           </a>
         </div>
-        <div className='navbar-center hidden lg:flex'>
+        <div className="navbar-center hidden lg:flex">
           {/*
           <ul className='menu menu-horizontal px-1'>
             <li>
@@ -84,15 +84,15 @@ const Navbar = () => {
             </li>
           </ul>*/}
         </div>
-        <div className='navbar-end'>
+        <div className="navbar-end">
           <FaLinkedin
-            className='mx-3'
+            className="mx-3"
             onClick={() => {
               window.open("https://www.linkedin.com/in/chengtchris/");
             }}
           />
           <LuGithub
-            className='mx-3'
+            className="mx-3"
             onClick={() => {
               window.open("https://github.com/chengtchris1");
             }}

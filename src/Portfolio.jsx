@@ -9,14 +9,14 @@ const images = [
 const Portfolio = () => {
   return (
     <>
-      <div className='flex flex-col sm:items-center justify-center m-0 md:m-40 text-white'>
-        <h1 className='text-6xl mx-10 sm:mx-0'>Projects:</h1>
-        <h2 className='text-6xl mx-10 sm:mx-0'>Section coming soon!</h2>
-        <h3 className='text-3xl mx-10 sm:mx-0'>
+      <div className="m-0 flex flex-col justify-center text-white sm:items-center md:m-40">
+        <h1 className="mx-10 text-6xl sm:mx-0">Projects:</h1>
+        <h2 className="mx-10 text-6xl sm:mx-0">Section coming soon!</h2>
+        <h3 className="mx-10 text-3xl sm:mx-0">
           For now, please see my projects on my{" "}
           <a
-            className='underline text-blue-500 hover:text-blue-700'
-            href='https://www.linkedin.com/in/chengtchris/'
+            className="text-blue-500 underline hover:text-blue-700"
+            href="https://www.linkedin.com/in/chengtchris/"
           >
             Linkedin
           </a>
