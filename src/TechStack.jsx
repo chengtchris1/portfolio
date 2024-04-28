@@ -19,6 +19,7 @@ import { GrSwift } from "react-icons/gr";
 import { TbBrandThreejs } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { useState } from "react";
+
 function TechStack() {
   const icons = [
     {
