@@ -18,6 +18,9 @@ import { useState } from "react";
 import { SiSupabase } from "react-icons/si";
 import { GrSwift } from "react-icons/gr";
 import { SiRailway } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
+import { SiDask } from "react-icons/si";
+
 function TechStack() {
   const icons = [
     {
@@ -27,6 +30,7 @@ function TechStack() {
     { component: <IoLogoReact className='mx-2 sm:mx-10' />, name: "React" },
     { component: <FaJava className='mx-2 sm:mx-10' />, name: "Java" },
     { component: <FaPython className='mx-2 sm:mx-10' />, name: "Python" },
+    { component: <SiDask className='mx-2 sm:mx-10' />, name: "Dask Dataframe" },
     { component: <GrSwift className='mx-2 sm:mx-10' />, name: "Swift" },
     {
       component: <SiTailwindcss className='mx-2 sm:mx-10' />,
@@ -59,10 +63,14 @@ function TechStack() {
       component: <SiRailway className='mx-2 sm:mx-10' />,
       name: "Railway",
     },
+    {
+      component: <TbBrandThreejs className='mx-2 sm:mx-10' />,
+      name: "Three.js",
+    },
   ];
   const [label, setLabel] = useState(" ");
   const iconRows = [];
-  const rowSizes = [6, 5, 4, 3];
+  const rowSizes = [6, 5, 4, 3, 2];
   let i = 0;
   for (const size of rowSizes) {
     iconRows.push(icons.slice(i, i + size));
