@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { Parallax } from "react-scroll-parallax";
 import Portfolio from "./Portfolio.jsx";
 import About from "./About.jsx";
+import TechStack from "./TechStack.jsx";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <Parallax speed={-10}>
         <About />
       </Parallax>
+      <br /> <br />
+      <TechStack />
       <Portfolio />
     </div>
   );
