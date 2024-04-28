@@ -78,13 +78,13 @@ function TechStack() {
   }
   return (
     <>
-      <div className='text-white text-left sm:text-center'>
-        <h2 className='text-6xl'>Some technologies I've used...</h2>
+      <div className='text-white text-left sm:text-center flex items-center justify-center my-12'>
+        <h2 className='text-6xl '>Some technologies I've used...</h2>
       </div>
       {iconRows.map((row, rowIndex) => (
         <motion.div
           key={rowIndex}
-          className='flex items-center justify-center overflow-hidden w-full h-fit my-8'
+          className='flex items-center justify-center overflow-hidden w-full h-fit my-0'
         >
           {row.map((Icon, index) => (
             <div
@@ -99,7 +99,7 @@ function TechStack() {
           ))}
         </motion.div>
       ))}
-      <div className='text-white text-center min-h-10'>{label}</div>
+      <div className='text-white text-center min-h-10 my-12'>{label}</div>
     </>
   );
 }
