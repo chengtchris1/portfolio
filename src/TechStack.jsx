@@ -92,7 +92,7 @@ function TechStack() {
               onMouseEnter={() => setLabel(Icon.name)}
               onMouseLeave={() => setLabel(" ")}
             >
-              <motion.div className='text-white text-5xl sm:text-9xl'>
+              <motion.div className='text-white text-5xl sm:text-8xl'>
                 {Icon.component}
               </motion.div>
             </div>
