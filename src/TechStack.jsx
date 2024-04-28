@@ -19,6 +19,7 @@ import { GrSwift } from "react-icons/gr";
 import { TbBrandThreejs } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 function TechStack() {
   const icons = [
@@ -77,26 +78,25 @@ function TechStack() {
   }
   return (
     <>
-      <div className="mx-10 my-12 flex items-center justify-center text-left text-white sm:text-center">
-        <h2 className="text-6xl">Some technologies I've used...</h2>
-      </div>
       {iconRows.map((row, rowIndex) => (
-        <motion.div
-          key={rowIndex}
-          className="my-0 flex h-fit w-full items-center justify-center overflow-hidden"
-        >
-          {row.map((Icon, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => setLabel(Icon.name)}
-              onMouseLeave={() => setLabel(" ")}
-            >
-              <motion.div className="text-5xl text-white sm:text-8xl">
-                {Icon.component}
-              </motion.div>
-            </div>
-          ))}
-        </motion.div>
+        <Parallax speed={-2} opacity={[2, 0]} easing={"easeInOut"}>
+          <div
+            key={rowIndex}
+            className="my-0 flex h-fit w-full items-center justify-center overflow-hidden"
+          >
+            {row.map((Icon, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setLabel(Icon.name)}
+                onMouseLeave={() => setLabel(" ")}
+              >
+                <motion.div className="text-5xl text-white sm:text-8xl">
+                  {Icon.component}
+                </motion.div>
+              </div>
+            ))}
+          </div>
+        </Parallax>
       ))}
       <div className="my-12 min-h-10 text-center text-white">{label}</div>
     </>
