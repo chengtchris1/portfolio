@@ -22,7 +22,9 @@ function App() {
         <div className='sm:hidden absolute inset-0 bg-transparent z-10'></div>
       </Parallax>
       <Parallax speed={-10}>
-        <About />
+        <div className='mx-0 sm:mx-20'>
+          <About />
+        </div>
       </Parallax>
       <br /> <br />
       <TechStack />

@@ -35,7 +35,7 @@ const About = () => {
 
   return (
     <>
-      <div className='mx-64 flex w-full h-auto flex-col sm:flex-row justify-center items-center'>
+      <div className='flex w-full h-auto flex-col sm:flex-row justify-center items-center'>
         <figure>
           <div className='rounded-full bg-opacity-50 bg-gradient-to-br from-blue-500 to-green-500 p-0 w-52 h-52 overflow-clip'>
             <Parallax
@@ -55,24 +55,22 @@ const About = () => {
           </div>
           <Parallax disabled={!parallaxEnabled || isMobile} speed={10}>
             <div
-              className={`text-2xl mr-[36rem] transition-opacity duration-500 ${
+              className={`flex flex-wrap text-2xl break-words transition-opacity duration-500 ${
                 inView ? "opacity-100" : "opacity-0"
               }`}
               ref={ref}
             >
-              <p className='text-2xl'>
-                My journey in coding began in elementary school where I created
-                VBS scripts to do various tasks with my computer (such as
-                opening the CD drive)—igniting a passion that has stayed with me
-                throughout my career. I realized my heart is in software
-                engineering. I noticed the tasks I enjoyed the most involved
-                tinkering and playing with cool applications with little
-                oversight. In my previous career, I leveraged cutting-edge cools
-                such as PowerAutomate and UI Path: tools which my higher-ups had
-                little experience with. Recently, I've been given the
-                opportunity to work on various projects which have me hone my
-                craft as a software engineer.
-              </p>
+              My journey in coding began in elementary school where I created
+              VBS scripts to do various tasks with my computer (such as opening
+              the CD drive)—igniting a passion that has stayed with me
+              throughout my career. I realized my heart is in software
+              engineering. I noticed the tasks I enjoyed the most involved
+              tinkering and playing with cool applications with little
+              oversight. In my previous career, I leveraged cutting-edge cools
+              such as PowerAutomate and UI Path: tools which my higher-ups had
+              little experience with. Recently, I've been given the opportunity
+              to work on various projects which have me hone my craft as a
+              software engineer.
             </div>
           </Parallax>
         </div>

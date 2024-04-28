@@ -8,8 +8,8 @@ const images = [
 ];
 const Portfolio = () => {
   return (
-    <div className='flex flex-col m-0 md:m-40'>
-      <h1 className='text-6xl'>Portfolio</h1>
+    <div className='flex flex-col m-10 md:m-40'>
+      <h1 className='text-6xl text-white'>Portfolio</h1>
       <PortfolioElement images={images} />
       <PortfolioElement images={images} />
     </div>
