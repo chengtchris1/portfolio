@@ -78,8 +78,8 @@ function TechStack() {
   }
   return (
     <>
-      <div className='text-white text-left sm:text-center flex items-center justify-center my-12'>
-        <h2 className='text-6xl '>Some technologies I've used...</h2>
+      <div className='text-white text-left sm:text-center flex items-center justify-center my-12 mx-10'>
+        <h2 className='text-6xl'>Some technologies I've used...</h2>
       </div>
       {iconRows.map((row, rowIndex) => (
         <motion.div

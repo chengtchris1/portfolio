@@ -9,10 +9,10 @@ const images = [
 const Portfolio = () => {
   return (
     <>
-      <div className='flex flex-col items-center justify-center m-0 md:m-40'>
-        <h1 className='text-6xl'>Projects:</h1>
-        <h2 className='text-6xl'>Section coming soon!</h2>
-        <h3 className='text-3xl'>
+      <div className='flex flex-col sm:items-center justify-center m-0 md:m-40 text-white'>
+        <h1 className='text-6xl mx-10 sm:mx-0'>Projects:</h1>
+        <h2 className='text-6xl mx-10 sm:mx-0'>Section coming soon!</h2>
+        <h3 className='text-3xl mx-10 sm:mx-0'>
           For now, please see my projects on my{" "}
           <a
             className='underline text-blue-500 hover:text-blue-700'
