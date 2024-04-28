@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF, Html } from "@react-three/drei";
-import { useInView } from "react-intersection-observer";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+//import { useInView } from "react-intersection-observer";
 
 const Hero3D = () => {
   const myModel = useGLTF("/3d/scene.gltf");
