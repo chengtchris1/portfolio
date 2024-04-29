@@ -6,11 +6,18 @@ import Portfolio from "./Portfolio.jsx";
 import About from "./About.jsx";
 import TechStack from "./TechStack.jsx";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   const { ref, inView, entry } = useInView({
     threshold: 0,
   });
+  useEffect(() => {
+    console.log(
+      `Model Information:
+This work is based on "Abstract Rainbow Translucent Pendant" (https://sketchfab.com/3d-models/abstract-rainbow-translucent-pendant-fd730e2886e748a0bd645d05fd96040d) by riach (https://sketchfab.com/riach) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)`,
+    );
+  }, []);
   return (
     <div className="w-screen bg-black font-sans">
       <div className="fixed left-0 top-0 z-30 w-full">
