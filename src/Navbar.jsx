@@ -1,6 +1,30 @@
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 const Navbar = () => {
+  let elements = (
+    <>
+      <li>
+        <a>Portfolio</a>
+      </li>
+      <li>
+        <a>About</a>
+      </li>
+      <li>
+        <a>Parent</a>
+        <ul className="p-2">
+          <li>
+            <a>Submenu 1</a>
+          </li>
+          <li>
+            <a>Submenu 2</a>
+          </li>
+          <li>
+            <a>Submenu 3</a>
+          </li>
+        </ul>
+      </li>
+    </>
+  );
   return (
     <>
       <div className="navbar z-30 font-sans backdrop-blur backdrop-brightness-[70%]">
@@ -25,25 +49,7 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-            >
-              <li>
-                <a>Portfolio</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            ></ul>
           </div>
           <a className="btn btn-ghost text-xl text-white">
             <span>

@@ -1,17 +1,34 @@
 import React from "react";
 import PortfolioElement from "./PortfolioElement";
-const images = [
-  "https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg",
-  "https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg",
-  "https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg",
-  "https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg",
+import ProductOverview from "./assets/ProductOverview.gif";
+import RelatedItems from "./assets/RelatedItems.gif";
+import Reviews from "./assets/Reviews.gif";
+
+import LandingPage from "./assets/landingPageGif.gif";
+import Carousel from "./assets/Carousel.gif";
+const portfolioItems = [
+  {
+    images: [LandingPage, Carousel],
+    title: "Project 2",
+    summary: "Placeholder 2",
+    key: "2",
+  },
+  {
+    images: [ProductOverview, RelatedItems, Reviews],
+    title: "Project Atelier",
+    summary:
+      "A full-stack landing page for an e-commerce site with 5 million+ products consisting of three distinct sections.",
+    key: "1",
+  },
 ];
+
 const Portfolio = () => {
   return (
-    <div className="m-10 flex flex-col md:m-40">
+    <div className="m-10 flex flex-col text-center md:m-40">
       <h1 className="text-6xl text-white">Portfolio</h1>
-      <PortfolioElement images={images} />
-      <PortfolioElement images={images} />
+      {portfolioItems.map((item) => (
+        <PortfolioElement items={item} key={item.key} />
+      ))}
     </div>
   );
 };
