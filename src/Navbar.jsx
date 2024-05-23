@@ -66,7 +66,12 @@ const Navbar = ({
               {elements}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-white">
+          <a
+            onClick={() => {
+              scrollToSection(heroRef);
+            }}
+            className="btn btn-ghost text-xl text-white"
+          >
             <span>
               <span className="opacity-50">{"<"}</span>
               <span>{"Chris Cheng"}</span>
@@ -81,7 +86,6 @@ const Navbar = ({
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {elements}
-
             {/*<li>
               <details>
                 <summary>Parent</summary>
