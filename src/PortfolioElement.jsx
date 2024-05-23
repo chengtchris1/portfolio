@@ -12,7 +12,7 @@ const PortfolioElement = ({ items }) => {
     );
   };
   return (
-    <div className="flex flex-col justify-center sm:flex-row">
+    <div className="flex flex-col justify-center lg:flex-row">
       <div className="w-fit">
         <div className="carousel relative w-full overflow-hidden">
           <div
@@ -60,7 +60,7 @@ const PortfolioElement = ({ items }) => {
           ))}
         </div>
       </div>
-      <div className="mb-12 w-full flex-col bg-slate-900 p-10 sm:w-1/2">
+      <div className="mb-12 w-full flex-col bg-slate-900 p-10 lg:w-1/2">
         <div className="flex items-start justify-center">
           <h1 className="text-4xl">{items.title}</h1>
         </div>

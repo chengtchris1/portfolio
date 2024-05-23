@@ -35,7 +35,7 @@ const About = () => {
 
   return (
     <>
-      <div className="flex h-auto w-full flex-col items-center justify-center sm:flex-row">
+      <div className="flex h-auto w-full flex-col items-center justify-center lg:flex-row">
         <figure>
           <div className="h-52 w-52 overflow-clip rounded-full bg-opacity-50 bg-gradient-to-br from-blue-500 to-green-500 p-0">
             <Parallax

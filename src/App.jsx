@@ -39,7 +39,7 @@ function App() {
       </div>
       <div ref={aboutRef}>
         <Parallax speed={-10}>
-          <div className="mx-0 sm:mx-[8.5rem]">
+          <div className="mx-0 lg:mx-[8.5rem]">
             <About />
           </div>
         </Parallax>
