@@ -42,7 +42,7 @@ const Navbar = ({
     <>
       <div className="navbar z-30 font-sans backdrop-blur backdrop-brightness-[70%]">
         <div className="navbar-start">
-          <div className="dropdown">
+          {/*<div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +66,7 @@ const Navbar = ({
               {elements}
             </ul>
           </div>
+          */}
           <a
             onClick={() => {
               scrollToSection(heroRef);
