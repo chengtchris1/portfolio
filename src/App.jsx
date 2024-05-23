@@ -49,8 +49,8 @@ function App() {
       <div ref={techStackRef}>
         <TechStack />
       </div>
-      <div className="mt-1 flex flex-col pt-1" ref={portfolioRef}>
-        <Parallax speed={-10}>
+      <div ref={portfolioRef}>
+        <Parallax speed={8}>
           <Portfolio />
         </Parallax>
       </div>

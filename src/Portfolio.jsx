@@ -33,7 +33,7 @@ const portfolioItems = [
 
 const Portfolio = () => {
   return (
-    <div className="m-10 flex flex-col text-center md:m-40 md:mt-28">
+    <div className="m-10 mt-0 flex flex-col text-center md:mx-40 md:mb-40 md:mt-7">
       <h1 className="text-6xl text-white">Portfolio</h1>
       <br />
       {portfolioItems.map((item, i) => {

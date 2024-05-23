@@ -48,11 +48,11 @@ function TechStack() {
     { component: <SiAlteryx className="mx-2 sm:mx-10" />, name: "Alteryx" },
     {
       component: <SiPowerautomate className="mx-2 sm:mx-10" />,
-      name: "Microsoft PowerAutomate",
+      name: "PowerAutomate",
     },
     {
       component: <SiStyledcomponents className="mx-2 sm:mx-10" />,
-      name: "Styled Components",
+      name: "Styled-Components",
     },
     {
       component: <SiSupabase className="mx-2 sm:mx-10" />,
@@ -98,7 +98,7 @@ function TechStack() {
           ))}
         </motion.div>
       ))}
-      <div className="my-12 mt-0 min-h-10 text-center text-white">{label}</div>
+      <div className="my-0 min-h-10 text-center text-white">{label}</div>
     </>
   );
 }
