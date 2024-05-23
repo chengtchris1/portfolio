@@ -98,7 +98,7 @@ function TechStack() {
           ))}
         </motion.div>
       ))}
-      <div className="my-12 min-h-10 text-center text-white">{label}</div>
+      <div className="my-12 mt-0 min-h-10 text-center text-white">{label}</div>
     </>
   );
 }

@@ -1,27 +1,40 @@
 import { FaLinkedin } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-const Navbar = () => {
+const Navbar = ({
+  scrollToSection,
+  heroRef,
+  aboutRef,
+  techStackRef,
+  portfolioRef,
+}) => {
   let elements = (
     <>
       <li>
-        <a>Portfolio</a>
+        <a
+          onClick={() => {
+            scrollToSection(heroRef);
+          }}
+        >
+          Hero
+        </a>
       </li>
       <li>
-        <a>About</a>
+        <a
+          onClick={() => {
+            scrollToSection(aboutRef);
+          }}
+        >
+          About
+        </a>
       </li>
       <li>
-        <a>Parent</a>
-        <ul className="p-2">
-          <li>
-            <a>Submenu 1</a>
-          </li>
-          <li>
-            <a>Submenu 2</a>
-          </li>
-          <li>
-            <a>Submenu 3</a>
-          </li>
-        </ul>
+        <a
+          onClick={() => {
+            scrollToSection(portfolioRef);
+          }}
+        >
+          Portfolio
+        </a>
       </li>
     </>
   );
@@ -49,7 +62,9 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-            ></ul>
+            >
+              {elements}
+            </ul>
           </div>
           <a className="btn btn-ghost text-xl text-white">
             <span>
@@ -65,13 +80,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
+            {elements}
+
+            {/*<li>
               <details>
                 <summary>Parent</summary>
                 <ul className="p-2">
@@ -83,10 +94,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+              </li>*/}
           </ul>
         </div>
         <div className="navbar-end">
