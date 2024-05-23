@@ -49,7 +49,7 @@ function App() {
         <TechStack />
       </div>
       <div className="mt-1 flex flex-col pt-1" ref={portfolioRef}>
-        <Parallax speed={-15}>
+        <Parallax speed={-10}>
           <Portfolio />
         </Parallax>
       </div>
