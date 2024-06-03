@@ -4,11 +4,6 @@ import bg from "./assets/hero-bg2.avif";
 import { Suspense } from "react";
 import { Html, useProgress } from "@react-three/drei";
 
-const Loader = () => {
-  const { progress } = useProgress()
-  return <Html center>{progress} % loaded</Html>
-}
-
 const Hero = () => {
   return (
     <>
@@ -27,9 +22,7 @@ const Hero = () => {
         </div>
 
         <div className="z-1 h-screen w-screen cursor-move">
-          <Suspense fallback={<Loader />}>
-              <Hero3DCanvas />
-          </Suspense>
+          <Hero3DCanvas />
         </div>
       </div>
     </>
