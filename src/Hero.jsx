@@ -1,6 +1,14 @@
 import Hero3DCanvas from "./Hero3D.jsx";
 import { Parallax } from "react-scroll-parallax";
 import bg from "./assets/hero-bg2.avif";
+import { Suspense } from "react";
+import { Html, useProgress } from "@react-three/drei";
+
+const Loader = () => {
+  const { progress } = useProgress()
+  return <Html center>{progress} % loaded</Html>
+}
+
 const Hero = () => {
   return (
     <>
@@ -19,7 +27,9 @@ const Hero = () => {
         </div>
 
         <div className="z-1 h-screen w-screen cursor-move">
-          <Hero3DCanvas />
+          <Suspense fallback={<Loader />}>
+              <Hero3DCanvas />
+          </Suspense>
         </div>
       </div>
     </>
