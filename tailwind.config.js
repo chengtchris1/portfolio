@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['League Spartan', 'sans-serif'],
-      }
+      },
+      daisyui: {
+        themes: ['dark']
+      },
     },
   },
   plugins: [require("daisyui")],

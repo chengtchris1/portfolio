@@ -21,7 +21,7 @@ function App() {
     });
   };
   return (
-    <div className="w-screen bg-black font-sans">
+    <div className="w-screen min-h-full h-fit bg-black opacity-100 font-sans text-white">
       <div className="fixed left-0 top-0 z-30 w-full">
         <Navbar
           scrollToSection={scrollToSection}
