@@ -14,7 +14,6 @@ function App() {
   const techStackRef = useRef(null);
   const portfolioRef = useRef(null);
   const scrollToSection = (ref) => {
-    console.log("THEREF", ref);
     window.scrollTo({
       top: ref.current.offsetTop,
       behavior: "smooth",
